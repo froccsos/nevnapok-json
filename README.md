@@ -1,2 +1,8 @@
 # nevnapok-json
-Magyar névnapok json
+Magyar névnapok json formátumban.
+
+A feltöltött json fájl az alábbi link feldolgozásából készült: https://mek.oszk.hu/00000/00056/html/196.htm
+
+A linken találtható felsorolás utolsó módosítása: 1997. július
+
+Szúrópróbaszerűen ellenőriztem néhány névnap helyességét, azok alapján jónak tűnt.
