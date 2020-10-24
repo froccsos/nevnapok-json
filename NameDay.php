@@ -23,7 +23,7 @@ class NameDay
                 }
                 list($month,$day) = explode('.',$date);
                 $clearDay = str_replace('*', '', $date);
-                if (empty($data[$month][$day])) {
+                if (empty($result[$month][$day])) {
                     $result[$month][$day] = ['main' => [], 'other' => []];
                 }
                 $key = $clearDay == $date ? 'other' : 'main';
@@ -39,10 +39,10 @@ class NameDay
     public static function get(int $month, int $day): array
     {
         $data = json_decode(file_get_contents(__DIR__.'/nevnapok.json'), true);
-        if(empty($data[$month][$day]['main'])){
+        if(empty($data[$month][$day])){
             throw new Exception('This aren\'t the date you\'re looking for...');
         }
-        return $data[$month][$day]['main'];
+        return $data[$month][$day];
     }
 
 
